@@ -24,6 +24,10 @@
   --accent-text:#E3A263;
   --accent-wash:rgba(217,143,74,.14);
   --accent-line:rgba(217,143,74,.45);
+  --whatsapp:#25D366;
+  --whatsapp-mid:#1DBE5A;
+  --whatsapp-dark:#128C7E;
+  --whatsapp-deep:#075E54;
   --mat:#17332E;
   --mat-edge:rgba(230,236,232,.14);
   --shadow:0 2px 6px rgba(0,0,0,.4),0 18px 36px -16px rgba(0,0,0,.55),0 44px 80px -42px rgba(0,0,0,.6);
@@ -93,16 +97,17 @@ strong{font-weight:600}
 @media(max-width:820px){.navlinks{display:none}}
 .masthead__whatsapp{
   position:relative;isolation:isolate;overflow:hidden;justify-content:center;min-height:3rem;
-  padding:.58rem 1rem;border:1px solid #F5B97D;border-radius:4px;
-  background:radial-gradient(95.37% 100% at 50% 0%,#F8B470 0%,#B6804B 44.55%,#7B552F 100%);
+  padding:.58rem 1rem;border:1px solid #55E58C;border-radius:4px;
+  background:radial-gradient(95.37% 100% at 50% 0%,#35E879 0%,var(--whatsapp-mid) 48%,var(--whatsapp-dark) 100%);
   color:#FFF;font-size:.82rem;font-weight:500;
-  transform:scale(1);transition:transform .22s ease,filter .22s ease;
+  box-shadow:0 .75rem 1.6rem -.95rem rgba(37,211,102,.65);
+  transform:scale(1);transition:transform .22s ease,filter .22s ease,box-shadow .22s ease;
 }
-.masthead__whatsapp:hover{transform:scale(1.045);filter:brightness(1.05)}
+.masthead__whatsapp:hover{transform:scale(1.045);filter:brightness(1.05);box-shadow:0 .9rem 1.8rem -.8rem rgba(37,211,102,.78)}
 .masthead__whatsapp:active{transform:scale(.985)}
 .masthead__whatsapp-icon{
   display:grid;place-items:center;width:1.75rem;aspect-ratio:1;border-radius:4px;
-  background:#FFF;color:#7B552F;flex:none;
+  background:#FFF;color:var(--whatsapp-deep);flex:none;
 }
 .masthead__whatsapp-icon svg{width:56%;height:56%}
 .masthead__whatsapp:hover .masthead__whatsapp-icon svg{transform-origin:50% 55%;animation:hero-whatsapp-ring .62s ease-in-out infinite}
@@ -493,6 +498,10 @@ strong{font-weight:600}
 .case-story__finding{position:relative;margin:.9rem 0 0;padding:clamp(1rem,2vw,1.5rem);border:1px solid rgba(245,185,125,.16);background:linear-gradient(135deg,rgba(125,78,43,.18),rgba(6,16,13,.42));color:#EEE9E1;font-family:var(--f-display);font-size:clamp(.9375rem,1vw,1rem);line-height:1.5}
 .case-story__finding::before{content:"";position:absolute;left:-1px;top:1.5rem;bottom:1.5rem;width:2px;background:#DDA064}
 .case-story__finding strong{color:#E6A667;font-weight:500}
+.case-story__response{display:grid;gap:.75rem;margin-top:.35rem;padding:clamp(1.1rem,2.2vw,1.55rem);border:1px solid rgba(124,199,181,.22);border-left:3px solid #25D366;background:linear-gradient(135deg,rgba(18,140,126,.18),rgba(3,18,14,.5));box-shadow:0 1.4rem 3rem -2rem rgba(0,0,0,.8)}
+.case-story__response-label{color:#6FE39A;font-family:var(--f-mono);font-size:.7rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase}
+.case-story__response p{margin:0;color:#D5DFDB;font-size:clamp(.95rem,1.15vw,1.03rem);line-height:1.7}
+.case-story__response strong{color:#F3F7F5;font-weight:600}
 @media(min-width:860px){.case-story__body{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr)}}
 @media(max-width:859px){.case-story__visual{min-height:30rem;height:auto}.case-story__intro{max-width:42rem}}
 @media(max-width:560px){.case-story{padding-block:4.4rem}.case-story__inner{gap:3rem}.case-story__head{grid-template-columns:minmax(0,1fr) 3.25rem;column-gap:1rem}.case-story__head h2{font-size:clamp(1.85rem,8.5vw,2.35rem)}.case-story__head .method__heading-arrow{width:3.25rem;align-self:start}.case-story__intro{grid-column:1 / -1}.case-story__visual{min-height:24rem}.case-story__narrative{padding-left:1.25rem}.case-story__finding{font-size:.9375rem;padding:1rem}}
@@ -607,16 +616,16 @@ strong{font-weight:600}
   position:relative;isolation:isolate;overflow:hidden;justify-self:start;
   display:inline-flex;align-items:center;justify-content:center;
   width:min(100%,17.425rem);min-height:3.65rem;margin-top:.45rem;padding:.55rem 1rem;
-  border:1px solid #F5B97D;border-radius:4px;
-  background:radial-gradient(95.37% 100% at 50% 0%,#F8B470 0%,#B6804B 44.55%,#7B552F 100%);
-  color:#FFF;box-shadow:none;transform:scale(1);transform-origin:center;
-  transition:transform .22s ease,filter .2s ease;
+  border:1px solid #55E58C;border-radius:4px;
+  background:radial-gradient(95.37% 100% at 50% 0%,#35E879 0%,var(--whatsapp-mid) 48%,var(--whatsapp-dark) 100%);
+  color:#FFF;box-shadow:0 1rem 2rem -1.2rem rgba(37,211,102,.68);transform:scale(1);transform-origin:center;
+  transition:transform .22s ease,filter .2s ease,box-shadow .22s ease;
 }
-.deliverables__cta:hover{transform:scale(1.045);filter:brightness(1.04)}
+.deliverables__cta:hover{transform:scale(1.045);filter:brightness(1.05);box-shadow:0 1.1rem 2.2rem -1rem rgba(37,211,102,.8)}
 .deliverables__cta:active{transform:scale(.985)}
 .deliverables__cta-inner{display:inline-flex;align-items:center;justify-content:center;gap:1rem;width:max-content;max-width:100%}
 .deliverables__cta-label{font-size:clamp(.9rem,1.15vw,1.08rem);font-weight:400;line-height:1}
-.deliverables__cta-icon{display:grid;place-items:center;width:2.1rem;aspect-ratio:1;border-radius:4px;background:#FFF;color:#7B552F;flex:none}
+.deliverables__cta-icon{display:grid;place-items:center;width:2.1rem;aspect-ratio:1;border-radius:4px;background:#FFF;color:var(--whatsapp-deep);flex:none}
 .deliverables__cta-icon svg{width:55%;height:55%}
 .deliverables__cta:hover .deliverables__cta-icon svg{transform-origin:50% 55%;animation:hero-whatsapp-ring .62s ease-in-out infinite}
 @media(max-width:560px){.deliverables__cta{width:100%}}
@@ -829,6 +838,27 @@ strong{font-weight:600}
 .sec--final .btn--ghost{border-color:rgba(233,240,237,.3);color:#E9F0ED}
 .sec--brand .btn--ghost:hover{border-color:var(--on-brand)}
 
+/* ============ WHATSAPP FLUTUANTE ============ */
+.whatsapp-float{
+  position:fixed;z-index:80;right:clamp(1rem,2.3vw,1.75rem);bottom:calc(clamp(1rem,2.3vw,1.75rem) + env(safe-area-inset-bottom));
+  display:flex;align-items:center;gap:.7rem;min-height:3.75rem;padding:.5rem .65rem .5rem .95rem;
+  border:1px solid #55E58C;border-radius:999px;
+  background:linear-gradient(135deg,var(--whatsapp),var(--whatsapp-dark));
+  color:#FFF;text-decoration:none;
+  box-shadow:0 1.15rem 2.5rem -1rem rgba(0,0,0,.65),0 0 0 0 rgba(37,211,102,.5);
+  transition:transform .22s ease,filter .22s ease,box-shadow .22s ease;
+  animation:whatsapp-float-pulse 2.1s ease-out infinite;
+}
+.whatsapp-float:hover{transform:translateY(-3px) scale(1.035);filter:brightness(1.05);box-shadow:0 1.3rem 2.8rem -1rem rgba(0,0,0,.72),0 0 0 .45rem rgba(37,211,102,.14)}
+.whatsapp-float:active{transform:scale(.97)}
+.whatsapp-float__label{font-size:.8rem;font-weight:600;line-height:1;white-space:nowrap}
+.whatsapp-float__icon{display:grid;place-items:center;width:2.7rem;aspect-ratio:1;border-radius:50%;background:#FFF;color:var(--whatsapp-deep);flex:none}
+.whatsapp-float__icon svg{width:58%;height:58%;animation:whatsapp-float-ring 1.65s ease-in-out infinite}
+@keyframes whatsapp-float-pulse{0%,42%,100%{box-shadow:0 1.15rem 2.5rem -1rem rgba(0,0,0,.65),0 0 0 0 rgba(37,211,102,.42)}72%{box-shadow:0 1.15rem 2.5rem -1rem rgba(0,0,0,.65),0 0 0 .75rem rgba(37,211,102,0)}}
+@keyframes whatsapp-float-ring{0%,58%,100%{transform:rotate(0) scale(1)}65%{transform:rotate(-10deg) scale(1.08)}72%{transform:rotate(10deg) scale(1.08)}79%{transform:rotate(-7deg) scale(1.04)}86%{transform:rotate(6deg) scale(1.04)}}
+@media(max-width:560px){.whatsapp-float{min-height:3.5rem;padding:.42rem}.whatsapp-float__label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.whatsapp-float__icon{width:2.65rem}}
+@media(prefers-reduced-motion:reduce){.whatsapp-float,.whatsapp-float__icon svg{animation:none}.whatsapp-float{transition:none}}
+
 /* ============ FOOTER ============ */
 .foot{
   position:relative;isolation:isolate;overflow:hidden;
@@ -957,8 +987,9 @@ strong{font-weight:600}
   justify-content:center;
   padding:.55rem clamp(.85rem,1.2vw,1.1rem);
   border-radius:4px;
-  border-color:#F5B97D;
-  background:radial-gradient(95.37% 100% at 50% 0%,#F8B470 0%,#B6804B 44.55%,#7B552F 100%);
+  border-color:#55E58C;
+  background:radial-gradient(95.37% 100% at 50% 0%,#35E879 0%,var(--whatsapp-mid) 48%,var(--whatsapp-dark) 100%);
+  box-shadow:0 1rem 2rem -1.2rem rgba(37,211,102,.68);
 }
 .hero__button-inner{
   display:inline-flex;align-items:center;justify-content:center;
@@ -973,7 +1004,7 @@ strong{font-weight:600}
 .hero .hero__button--contact::before{
   content:"";position:absolute;z-index:-1;inset:-35% auto -35% -42%;width:32%;
   transform:skewX(-20deg);
-  background:linear-gradient(90deg,transparent,rgba(248,180,112,.92),transparent);
+  background:linear-gradient(90deg,transparent,rgba(197,255,218,.9),transparent);
   animation:hero-shine 3.2s ease-in-out infinite;
 }
 @keyframes hero-shine{0%,18%{left:-42%}68%,100%{left:118%}}
@@ -987,12 +1018,12 @@ strong{font-weight:600}
   display:grid;place-items:center;
   width:12.012cqi;height:12.012cqi;
   flex:0 0 auto;border-radius:2.15cqi;
-  background:#fff;color:#7B552F;
+  background:#fff;color:var(--whatsapp-deep);
   transition:box-shadow .24s ease,transform .24s ease;
 }
 .hero__wa svg{width:55%;height:55%}
 .hero .hero__button--contact:hover .hero__wa{
-  box-shadow:0 0 0 3px rgba(255,255,255,.14),0 0 .8rem rgba(255,244,229,.5);
+  box-shadow:0 0 0 3px rgba(255,255,255,.14),0 0 .8rem rgba(149,255,188,.58);
 }
 .hero .hero__button--contact:hover .hero__wa svg{
   transform-origin:50% 55%;
@@ -1204,7 +1235,7 @@ strong{font-weight:600}
       <a href="#quem">Quem assina</a>
       <a href="#faq">Dúvidas</a>
     </nav>
-    <a class="btn masthead__whatsapp" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica.">
+    <a class="btn masthead__whatsapp" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer">
       <span class="masthead__whatsapp-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.85.84-.85 2.04s.87 2.37 1 2.53c.12.16 1.72 2.63 4.17 3.69.58.25 1.04.4 1.39.51.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg></span>
       WhatsApp
     </a>
@@ -1234,7 +1265,7 @@ strong{font-weight:600}
         </p>
 
         <div class="hero__cta">
-          <a class="btn hero__button hero__button--contact" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica.">
+          <a class="btn hero__button hero__button--contact" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer">
             <span class="hero__button-inner">
               <span class="hero__button-label">Entrar em Contato</span>
               <span class="hero__wa" aria-hidden="true">
@@ -1411,6 +1442,10 @@ strong{font-weight:600}
           <div class="case-story__silence"><span>60 horas sem registro de reavaliação</span></div>
           <p>Em <strong>14/03, às 21:30</strong>, há retorno com dor mantida e impotência funcional. A tomografia mostra uma fratura de colo femoral.</p>
           <blockquote class="case-story__finding">A alta foi dada 37 minutos após o raio-X, sem reavaliação registrada. <strong>A fratura não estava ausente — estava não documentada.</strong></blockquote>
+          <div class="case-story__response">
+            <span class="case-story__response-label">Como eu atuaria neste caso</span>
+            <p>Eu reconstruiria a cronologia e confrontaria a dor persistente, a dificuldade para deambular, o exame físico, os limites do raio-X inicial e o protocolo vigente. Verificaria se havia indicação de <strong>reavaliação clínica, observação, repetição de imagem ou exame complementar</strong> antes da alta e formularia quesitos objetivos sobre oportunidade diagnóstica, nexo causal e repercussão do atraso. Assim, o caso deixa de ser apenas uma fratura descoberta depois e passa a responder à pergunta técnica central: <strong>a alta sem reavaliação e sem investigação adicional foi adequada aos sinais registrados?</strong></p>
+          </div>
         </div>
       </div>
     </div>
@@ -1455,7 +1490,7 @@ strong{font-weight:600}
           </div>
           <div class="area">
             <div class="area__head"><span class="area__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 10 6-6 4 4-6 6-4-4ZM13 6l5 5M7 12l5 5M3 21h12M14.5 13.5l5 5"/></svg></span><span class="area__k">Criminal</span></div>
-            <span class="area__v">Lesão corporal e sua gradação, nexo causal em óbito, capacidade, laudo de corpo de delito</span>
+            <span class="area__v">Lesão corporal e sua gradação, nexo causal em óbito, capacidade e avaliação crítica de laudo de corpo de delito</span>
           </div>
           <div class="area">
             <div class="area__head"><span class="area__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.2 8.3-8 10-4.8-1.7-8-5-8-10V6l8-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><span class="area__k">Securitário</span></div>
@@ -1493,7 +1528,7 @@ strong{font-weight:600}
         <div class="scope-rule" aria-hidden="true"></div>
         <div class="caveat">
           <p><strong>Uma ressalva:</strong> Minha análise não depende de eu ser especialista na doença — depende de eu saber ler o documento que a registra, confrontá-lo com o que se alega e com a literatura vigente.</p>
-          <p>Quando o caso exige profundidade clínica de subespecialidade, eu digo isso a você e trabalho em conjunto com um consultor da área. Prefiro perder um caso a assinar um parecer que eu não sustente em audiência.</p>
+          <p>Quando o caso exige profundidade clínica de uma subespecialidade, eu deixo isso claro desde a análise inicial e, se necessário, trabalho em conjunto com um consultor da área. Não fecho um contrato para assinar um parecer que eu não possa sustentar tecnicamente em audiência.</p>
         </div>
       </div>
     </div>
@@ -1518,7 +1553,7 @@ strong{font-weight:600}
         <div class="deliverables__intro-inner">
           <h2>É isso que eu vou te entregar:</h2>
           <p>São essas as coisas que você irá receber ao trabalhar junto comigo.</p>
-          <a class="btn deliverables__cta" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica.">
+          <a class="btn deliverables__cta" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer">
             <span class="deliverables__cta-inner">
               <span class="deliverables__cta-label">Entrar em Contato</span>
               <span class="deliverables__cta-icon" aria-hidden="true">
@@ -1622,7 +1657,7 @@ strong{font-weight:600}
 
         <p class="signature__statement">O prontuário que está no seu processo é o mesmo tipo de documento que eu preencho no plantão desta semana. Eu não interpreto o registro médico de fora — eu o produzo.</p>
 
-        <a class="btn deliverables__cta signature__cta" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica.">
+        <a class="btn deliverables__cta signature__cta" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer">
           <span class="deliverables__cta-inner">
             <span class="deliverables__cta-label">Entrar em Contato</span>
             <span class="deliverables__cta-icon" aria-hidden="true">
@@ -1694,7 +1729,7 @@ strong{font-weight:600}
           <h2><span>Manda o caso.</span> Eu te digo o que ele sustenta.</h2>
           <p>Você recebe a proposta com escopo, prazo e valor antes de qualquer trabalho começar. E descobre em horas, não em meses, se a documentação médica sustenta a sua tese — em vez de descobrir isso no meio da audiência.</p>
           <div class="final__row">
-            <a class="btn deliverables__cta final__whatsapp" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica.">
+            <a class="btn deliverables__cta final__whatsapp" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer">
               <span class="deliverables__cta-inner">
                 <span class="deliverables__cta-label">Enviar meu caso pelo WhatsApp</span>
                 <span class="deliverables__cta-icon" aria-hidden="true">
@@ -1719,7 +1754,7 @@ strong{font-weight:600}
       </a>
 
       <div class="foot__links">
-        <a href="https://wa.me/5562996651270">
+        <a href="https://wa.me/5562996651270" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/><path d="M8.7 8.2c.2-.4.4-.4.7-.4h.3c.2 0 .3.1.4.4l.7 1.6c.1.3.1.5-.1.7l-.6.7c-.2.2-.1.4 0 .6.5.9 1.3 1.7 2.2 2.2.2.1.4.2.6 0l.8-.9c.2-.2.4-.2.7-.1l1.6.8c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.6-.5.4-1.2.7-2 .5-1.1-.3-2.6-.8-4.4-2.4-1.4-1.3-2.4-2.8-2.7-4-.3-1 .1-1.6.4-1.9Z"/></svg>
           WhatsApp
         </a>
@@ -1740,6 +1775,13 @@ strong{font-weight:600}
     </div>
   </div>
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/5562996651270?text=Dra.%20El%C3%A1ria%2C%20gostaria%20de%20enviar%20um%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer" aria-label="Falar com a Dra. Elária pelo WhatsApp">
+  <span class="whatsapp-float__label">Fale pelo WhatsApp</span>
+  <span class="whatsapp-float__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.85.84-.85 2.04s.87 2.37 1 2.53c.12.16 1.72 2.63 4.17 3.69.58.25 1.04.4 1.39.51.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+  </span>
+</a>
 
 <script>
 (() => {
