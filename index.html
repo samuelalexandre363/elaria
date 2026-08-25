@@ -855,9 +855,11 @@ strong{font-weight:600}
   background:linear-gradient(135deg,var(--whatsapp),var(--whatsapp-dark));
   color:#FFF;text-decoration:none;
   box-shadow:0 1.15rem 2.5rem -1rem rgba(0,0,0,.65),0 0 0 0 rgba(37,211,102,.5);
-  transition:transform .22s ease,filter .22s ease,box-shadow .22s ease;
-  animation:whatsapp-float-pulse 2.1s ease-out infinite;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(1rem) scale(.94);
+  transition:opacity .24s ease,visibility .24s ease,transform .24s ease,filter .22s ease,box-shadow .22s ease;
+  animation:none;
 }
+.whatsapp-float.is-visible{opacity:1;visibility:visible;pointer-events:auto;transform:none;animation:whatsapp-float-pulse 2.1s ease-out infinite}
 .whatsapp-float:hover{transform:translateY(-3px) scale(1.035);filter:brightness(1.05);box-shadow:0 1.3rem 2.8rem -1rem rgba(0,0,0,.72),0 0 0 .45rem rgba(37,211,102,.14)}
 .whatsapp-float:active{transform:scale(.97)}
 .whatsapp-float__label{font-size:.8rem;font-weight:600;line-height:1;white-space:nowrap}
@@ -1815,6 +1817,30 @@ strong{font-weight:600}
 </a>
 
 <script>
+(() => {
+  const whatsappFloat = document.querySelector('.whatsapp-float');
+  if (!whatsappFloat) return;
+
+  let ticking = false;
+  const updateWhatsappFloat = () => {
+    const isVisible = window.scrollY >= window.innerHeight * 2;
+    whatsappFloat.classList.toggle('is-visible', isVisible);
+    whatsappFloat.setAttribute('aria-hidden', String(!isVisible));
+    whatsappFloat.tabIndex = isVisible ? 0 : -1;
+    ticking = false;
+  };
+
+  const requestUpdate = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(updateWhatsappFloat);
+  };
+
+  updateWhatsappFloat();
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+})();
+
 (() => {
   const masthead = document.querySelector('.masthead');
   if (!masthead) return;
