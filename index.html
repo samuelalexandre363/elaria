@@ -1819,7 +1819,7 @@ strong{font-weight:600}
 
   let ticking = false;
   const updateWhatsappFloat = () => {
-    const isVisible = window.scrollY >= window.innerHeight * 2;
+    const isVisible = true;
     whatsappFloat.classList.toggle('is-visible', isVisible);
     whatsappFloat.setAttribute('aria-hidden', String(!isVisible));
     whatsappFloat.tabIndex = isVisible ? 0 : -1;
