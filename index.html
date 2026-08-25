@@ -946,7 +946,7 @@ strong{font-weight:600}
   display:inline-flex;align-items:center;gap:clamp(.4rem,.5vw,.65rem);
   min-height:clamp(1.3rem,2.05vw,2.4rem);
   padding:clamp(.2rem,.4vw,.45rem) clamp(.45rem,.8vw,.9rem);
-  border-radius:.28rem;background:rgba(8,37,31,.05);
+  border-radius:.28rem;background:#E6F2F0;
   color:#08251F;font-family:"Poppins",sans-serif;
   font-size:clamp(.5rem,.7vw,.8rem);font-weight:400;line-height:1;
 }
@@ -1048,8 +1048,8 @@ strong{font-weight:600}
 }
 @media(max-width:620px){
   .hero{
-    min-height:calc(100svh - 4.25rem);
-    height:calc(100svh - 4.25rem);
+    min-height:calc(130svh - 5.525rem);
+    height:calc(130svh - 5.525rem);
     align-items:stretch;
     overflow:hidden;
     padding-block:0;
@@ -1062,7 +1062,7 @@ strong{font-weight:600}
   }
   .hero>.wrap{
     min-height:100%;
-    padding:1rem 1.5rem clamp(1.15rem,4.5svh,2.1rem);
+    padding:1.3rem 1.5rem clamp(1.15rem,4.5svh,2.1rem);
   }
   .hero__grid{display:flex;align-items:flex-end}
   .hero__content{position:relative;z-index:1;width:100%;transform:none}
@@ -1081,6 +1081,8 @@ strong{font-weight:600}
   .hero__button-label{font-size:1.05rem}
   .hero__wa{width:2.1rem;height:2.1rem;border-radius:.45rem}
   .hero .hero__button--method{width:15.25rem;max-width:100%;border-radius:4px;font-size:.95rem}
+  .method__heading,.case-story__head,.scope-heading,.process__heading{grid-template-columns:minmax(0,1fr)}
+  .method__heading-arrow,.scope-heading__arrow,.process__arrow{display:none}
 }
 @media(prefers-reduced-motion:reduce){
   .hero .hero__button--contact::before{animation:none}
