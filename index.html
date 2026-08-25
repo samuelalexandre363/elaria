@@ -887,11 +887,7 @@ strong{font-weight:600}
 .foot__in{display:grid;gap:clamp(2.2rem,4vw,3.5rem)}
 .foot__top{display:grid;gap:2rem;align-items:end}
 .foot__brand{display:flex;align-items:center;gap:clamp(1rem,2vw,1.6rem);width:max-content;max-width:100%;text-decoration:none}
-.foot__monogram{
-  position:relative;color:#F3F7F5;font-family:var(--f-display);
-  font-size:clamp(2.6rem,5vw,4.3rem);font-weight:600;line-height:.9;letter-spacing:.025em;
-}
-.foot__monogram::after{content:"";position:absolute;left:0;right:0;bottom:-.55rem;height:2px;background:#D98F4A}
+.foot__logo{display:block;width:clamp(5.5rem,9vw,8rem);height:auto;flex:none}
 .foot__brand-copy{max-width:17rem;color:#B7C7C1;font-size:clamp(.78rem,1.15vw,.94rem);line-height:1.45;letter-spacing:.01em}
 .foot__links{display:flex;flex-wrap:wrap;gap:.65rem}
 .foot__links a{
@@ -1782,7 +1778,7 @@ strong{font-weight:600}
   <div class="wrap foot__in">
     <div class="foot__top">
       <a class="foot__brand" href="#topo" aria-label="EPR Perícia Médica e Assistência Técnica — voltar ao topo">
-        <span class="foot__monogram">EPR</span>
+        <img class="foot__logo" src="assets/logo.svg" alt="EPR" width="546" height="282" loading="lazy" decoding="async">
         <span class="foot__brand-copy">Perícia Médica e Assistência Técnica</span>
       </a>
 
