@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <style>
 /* ============ TOKENS ============ */
-/* Página com identidade fixa em tema escuro — não acompanha a preferência
+/* Página com identidade fixa em tema escuro, não acompanha a preferência
    do navegador. Todas as cores são pintadas explicitamente. */
 :root{
   --bg:#0B1513;
@@ -287,7 +287,7 @@ strong{font-weight:600}
 .sec--brand h2,.sec--brand .sec__label,.sec--brand .sec__body>p{color:var(--on-brand)}
 .sec--brand .sec__body>p{opacity:.86}
 
-/* ============ A PERGUNTA — COMPOSIÇÃO EDITORIAL ============ */
+/* ============ A PERGUNTA, COMPOSIÇÃO EDITORIAL ============ */
 .sec--question{
   position:relative;isolation:isolate;overflow:hidden;
   border-top:0;
@@ -404,6 +404,9 @@ strong{font-weight:600}
 @media(min-width:900px){
   .question{grid-template-columns:minmax(19rem,.88fr) minmax(0,1.12fr)}
 }
+.sec--objection .question{grid-template-columns:minmax(0,1fr);max-width:68rem}
+.sec--objection .question__visual--hidden{display:none}
+.sec--objection .question__content{max-width:62rem}
 @media(max-width:899px){
   .sec--question{padding-block:4.5rem}
   .question__visual{width:min(82vw,24rem);margin-inline:auto}
@@ -419,7 +422,7 @@ strong{font-weight:600}
   .question__pull{border-radius:.12rem}
 }
 
-/* ============ O MÉTODO — COMPOSIÇÃO EDITORIAL ============ */
+/* ============ O MÉTODO, COMPOSIÇÃO EDITORIAL ============ */
 .sec--method{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(5rem,8vw,8rem);border-top:1px solid rgba(230,236,232,.08);background:linear-gradient(118deg,rgba(28,91,75,.16) 0%,transparent 35%),linear-gradient(155deg,transparent 0 62%,rgba(76,133,118,.045) 62.1% 78%,transparent 78.1%),linear-gradient(145deg,#082820 0%,#061D18 42%,#041512 72%,#030F0C 100%)}
 .sec--method::before{content:"";position:absolute;z-index:-1;left:-10rem;bottom:-15rem;width:38rem;height:32rem;border:1px solid rgba(124,199,181,.07);transform:rotate(8deg);clip-path:polygon(0 24%,34% 0,100% 24%,76% 100%,12% 78%);background:linear-gradient(135deg,rgba(124,199,181,.035),transparent 62%)}
 .sec--method::after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(118deg,transparent 0 84%,rgba(124,199,181,.03) 84.1% 84.18%,transparent 84.28%)}
@@ -487,7 +490,7 @@ strong{font-weight:600}
 @media(max-width:620px){.method__criteria-title{font-size:clamp(1.15rem,7vw,1.75rem);line-height:1.08;white-space:normal}}
 @media(max-width:620px){.sec--method{padding-block:4rem}.method{gap:3.4rem}.method__heading{grid-template-columns:minmax(0,1fr) 3.25rem;column-gap:1rem}.method__heading h2{font-size:clamp(2.05rem,9.7vw,2.7rem)}.method__heading-arrow{width:3.25rem;align-self:start}.method__lead{grid-column:1 / -1}.method__visual{min-height:21rem;padding:1.4rem}.sec--method .method__checks{grid-template-columns:1fr}.sec--method .method__checks li{min-height:0}}
 
-/* ============ CASO CLÍNICO — DOBRA NARRATIVA ============ */
+/* ============ CASO CLÍNICO, DOBRA NARRATIVA ============ */
 .case-story{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(5.5rem,9vw,9rem);border-top:1px solid rgba(230,236,232,.08);background:linear-gradient(118deg,rgba(28,91,75,.16) 0%,transparent 35%),linear-gradient(155deg,transparent 0 62%,rgba(76,133,118,.045) 62.1% 78%,transparent 78.1%),linear-gradient(145deg,#082820 0%,#061D18 42%,#041512 72%,#030F0C 100%);color:#F1F3F0}
 .case-story::before{content:"";position:absolute;z-index:-1;right:-8rem;top:-10rem;width:34rem;aspect-ratio:1;border:1px solid rgba(245,185,125,.08);transform:rotate(18deg);background:linear-gradient(145deg,rgba(245,185,125,.03),transparent 60%);clip-path:polygon(24% 0,100% 0,76% 100%,0 78%)}
 .case-story::after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 0 49.96%,rgba(255,255,255,.018) 50%,transparent 50.04%)}
@@ -554,7 +557,7 @@ strong{font-weight:600}
   padding:1.05rem 1.2rem;max-width:var(--measure);
 }
 
-/* ============ ESCOPO — FUNDO CLARO ============ */
+/* ============ ESCOPO, FUNDO CLARO ============ */
 .sec--scope-light{border-top:1px solid #D5E0DA;background:#F7F9F7;color:#12372E}
 .sec--scope-light .sec__in{display:block}
 .sec--scope-light .sec__label{color:#527366}
@@ -617,7 +620,7 @@ strong{font-weight:600}
 .svc__for{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);opacity:.85}
 @media(min-width:760px){.svc h3,.svc p,.svc__for{grid-column:2}}
 
-/* ============ ENTREGÁVEIS — CARDS EMPILHADOS ============ */
+/* ============ ENTREGÁVEIS, CARDS EMPILHADOS ============ */
 .sec--deliverables{position:relative;isolation:isolate;overflow:visible;padding-block:clamp(5rem,8vw,8rem);border-top:1px solid rgba(230,236,232,.08);background:linear-gradient(118deg,rgba(28,91,75,.16) 0%,transparent 35%),linear-gradient(155deg,transparent 0 62%,rgba(76,133,118,.045) 62.1% 78%,transparent 78.1%),linear-gradient(145deg,#082820 0%,#061D18 42%,#041512 72%,#030F0C 100%);color:#F2F6F3}
 .sec--deliverables::before{content:"";position:absolute;z-index:-1;left:-12rem;top:16rem;width:38rem;height:38rem;border:1px solid rgba(124,199,181,.06);transform:rotate(14deg);clip-path:polygon(20% 0,100% 12%,78% 100%,0 72%)}
 .deliverables{display:grid;gap:clamp(3.5rem,7vw,7rem);max-width:76rem}
@@ -686,7 +689,7 @@ strong{font-weight:600}
 .step h3{font-family:var(--f-body);font-size:1rem;font-weight:600;margin-bottom:.2rem}
 .step p{font-size:.92rem;color:var(--muted)}
 
-/* ============ PROCESSO — JORNADA EM QUATRO ETAPAS ============ */
+/* ============ PROCESSO, JORNADA EM QUATRO ETAPAS ============ */
 .sec--process{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(5rem,8vw,7.5rem);border-top:1px solid #CBD7D0;background:#F1F4F1;color:#12372E}
 .sec--process::before{content:"";position:absolute;z-index:-1;right:-10rem;top:-14rem;width:34rem;height:34rem;border:1px solid rgba(18,55,46,.07);background:linear-gradient(145deg,rgba(18,55,46,.035),transparent 68%);transform:rotate(-12deg);clip-path:polygon(18% 0,100% 0,82% 100%,0 76%)}
 .process{display:grid;gap:clamp(2.75rem,5vw,4.75rem);max-width:76rem}
@@ -733,7 +736,7 @@ strong{font-weight:600}
 .bio__name{font-family:var(--f-display);font-size:1.35rem;color:var(--text)}
 .bio__crm{font-family:var(--f-mono);font-size:.74rem;color:var(--accent-text);letter-spacing:.06em}
 
-/* ============ FAQ — SISTEMA EDITORIAL ============ */
+/* ============ FAQ, SISTEMA EDITORIAL ============ */
 .sec--faq{
   position:relative;isolation:isolate;overflow:hidden;border-top:0;
   padding-block:clamp(5rem,8vw,8.5rem) clamp(4.5rem,7vw,7rem);
@@ -940,7 +943,7 @@ strong{font-weight:600}
   .foot__brand{align-items:flex-start;flex-direction:column;gap:1.25rem}
   .foot__links a{flex:1}
 }
-/* ============ HERO — COMPOSIÇÃO CLARA ============ */
+/* ============ HERO, COMPOSIÇÃO CLARA ============ */
 .hero{
   min-height:calc(100svh - 4.25rem);
   display:flex;
@@ -1158,14 +1161,7 @@ strong{font-weight:600}
 }
 @media(prefers-reduced-motion:reduce){.expertise-strip__track{transform:none!important}}
 
-/* ============ ESPAÇO PARA PROVA SOCIAL ============ */
-.proof-slot{border-block:1px solid rgba(18,55,46,.12);background:#E6F2F0;color:#12372E}
-.proof-slot__in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-block:clamp(1.2rem,2vw,1.8rem)}
-.proof-slot__label{color:#527366;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase}
-.proof-slot__text{max-width:48rem;margin:0;color:#49685C;font-size:clamp(.82rem,1vw,.94rem);line-height:1.45;text-align:right}
-@media(max-width:620px){.proof-slot__in{align-items:flex-start;flex-direction:column;gap:.45rem}.proof-slot__text{text-align:left}}
-
-/* ============ QUEM ASSINA — PERFIL EDITORIAL ============ */
+/* ============ QUEM ASSINA, PERFIL EDITORIAL ============ */
 .sec--signature{
   background:
     linear-gradient(112deg,rgba(28,91,75,.24) 0%,rgba(10,48,41,.08) 35%,transparent 58%),
@@ -1283,14 +1279,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- ══════════════════════════════════════════════
-     ⚠️  ANTES DE PUBLICAR — substituir em todo o arquivo:
+     ⚠️  ANTES DE PUBLICAR, substituir em todo o arquivo:
      · 5562996651270  → seu número com DDI+DDD (ex.: 5562988887777)
      · dra.elaria@gmail.com → e-mail profissional, se for outro
      ══════════════════════════════════════════════ -->
 
 <header class="masthead is-visible" aria-hidden="false">
   <div class="wrap masthead__in">
-    <a class="mark" href="#topo" aria-label="EPR — voltar ao topo">
+    <a class="mark" href="#topo" aria-label="EPR, voltar ao topo">
       <img class="masthead__logo" src="assets/logo.svg" alt="EPR">
     </a>
     <nav class="navlinks">
@@ -1331,7 +1327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="hero__urgency">Resposta técnica em até 6h úteis, sem compromisso</p>
         <h1>O que a medicina diz do<br class="hero-break-desktop"> seu caso <em>não está escrito<br class="hero-break-desktop"> em português jurídico.</em></h1>
         <p class="hero__sub">
-          Perícia judicial e assistência técnica em todas as<span class="hero-sub-break-desktop"></span> áreas da medicina. <strong>Eu leio prontuário, exame e laudo<span class="hero-sub-break-desktop"></span> pelo que eles tecnicamente sustentam</strong> — e traduzo<span class="hero-sub-break-desktop"></span> isso para a linguagem que o processo usa.
+          Perícia judicial e assistência técnica em todas as<span class="hero-sub-break-desktop"></span> áreas da medicina. <strong>Eu leio prontuário, exame e laudo<span class="hero-sub-break-desktop"></span> pelo que eles tecnicamente sustentam</strong>, e traduzo<span class="hero-sub-break-desktop"></span> isso para a linguagem que o processo usa.
         </p>
 
         <div class="hero__cta">
@@ -1367,17 +1363,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <section class="proof-slot" aria-label="Espaço reservado para prova social">
-    <div class="wrap proof-slot__in">
-      <span class="proof-slot__label">Prova social</span>
-      <p class="proof-slot__text">Espaço reservado para números reais de processos e atendimentos, assim que estiverem documentados.</p>
-    </div>
-  </section>
-
   <!-- ══════ OBJEÇÃO ══════ -->
-  <section class="sec sec--question">
+  <section class="sec sec--question sec--objection">
     <div class="wrap question">
-      <div class="question__visual">
+      <div class="question__visual question__visual--hidden" aria-hidden="true" hidden>
         <div class="question__image-frame">
           <img src="assets/epr-perita-retrato.webp" alt="Dra. Elária Pacífico Rocha" width="840" height="1056" loading="lazy" decoding="async">
           <span class="question__image-accent" aria-hidden="true"></span>
@@ -1387,7 +1376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>“O perito judicial já vai fazer o laudo. <span>Por que eu preciso de você?</span>”</h2>
         <div class="question__copy">
           <p>É a pergunta certa. E a resposta é simples: <strong>o perito judicial responde ao juízo.</strong> Ele não trabalha para a sua tese e não tem obrigação de procurar o que favorece o seu cliente.</p>
-          <p>Ele examina o que lhe foi apresentado, responde aos quesitos que recebeu e entrega. Se os quesitos foram mal formulados, ele responde mal. Se o prontuário tem uma inconsistência que ninguém apontou, ela passa. Se a conclusão foi além do que o exame sustenta, ninguém contesta — porque, do outro lado, não havia médico.</p>
+          <p>Ele examina o que lhe foi apresentado, responde aos quesitos que recebeu e entrega. Se os quesitos foram mal formulados, ele responde mal. Se o prontuário tem uma inconsistência que ninguém apontou, ela passa. Se a conclusão foi além do que o exame sustenta, ninguém contesta, porque, do outro lado, não havia médico.</p>
         </div>
         <p class="question__pull">O assistente técnico é o único médico do processo que está do seu lado.</p>
         <p class="question__closing">E há um detalhe de tempo que decide causas: depois que o laudo pericial é juntado, sua margem de manobra encolhe. <strong>Assistência técnica que entra antes da perícia vale muito mais do que impugnação que entra depois.</strong></p>
@@ -1400,15 +1389,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap method">
       <header class="method__heading">
         <h2>Eu não analiso a doença. <span>Analiso o documento que a registrou.</span></h2>
-        <p class="method__lead">A maior parte dos processos com prova médica não é decidida pelo diagnóstico. É decidida pelo que ficou escrito sobre ele — e, com frequência, <strong>pelo que não ficou.</strong></p>
+        <p class="method__lead">A maior parte dos processos com prova médica não é decidida pelo diagnóstico. É decidida pelo que ficou escrito sobre ele e, com frequência, <strong>pelo que não ficou.</strong></p>
         <span class="method__heading-arrow" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 4v22M7.5 17.5 16 26l8.5-8.5"/></svg></span>
       </header>
 
       <div class="method__overview">
         <div class="method__copy">
-          <p>Um prontuário não é um relatório. É um documento produzido sob pressão assistencial, muitas vezes em atendimento corrido, às vezes preenchido depois. Ele tem lacunas, repetições copiadas da evolução anterior, incoerências de data e horário, condutas registradas sem a reavaliação correspondente. Cada uma dessas falhas é um ponto técnico — a favor ou contra o seu cliente.</p>
+          <p>Um prontuário não é um relatório. É um documento produzido sob pressão assistencial, muitas vezes em atendimento corrido, às vezes preenchido depois. Ele tem lacunas, repetições copiadas da evolução anterior, incoerências de data e horário, condutas registradas sem a reavaliação correspondente. Cada uma dessas falhas é um ponto técnico, a favor ou contra o seu cliente.</p>
           <p><strong>Por que eu enxergo isso:</strong> eu escrevo prontuário. Hoje, toda semana, em plantão de hospital e de UPA. Quem se afastou da assistência lê o registro médico como texto. Eu leio como quem escreve aquele texto.</p>
-          <p class="method__statement">É por isso que atuo em todas as especialidades: meu objeto de análise não é a doença — é o documento. E o documento é o mesmo em toda a medicina.</p>
+          <p class="method__statement">É por isso que atuo em todas as especialidades: meu objeto de análise não é a doença, é o documento. E o documento é o mesmo em toda a medicina.</p>
         </div>
 
         <div class="method__visual">
@@ -1487,7 +1476,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="checks method__checks">
           <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5"/></svg><span>Coerência entre queixa, exame físico e conduta adotada</span></li>
           <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5"/></svg><span>Compatibilidade entre o mecanismo alegado e a lesão descrita</span></li>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5"/></svg><span>Cronologia — o que foi registrado, quando, e o que ficou sem registro</span></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5"/></svg><span>Cronologia, o que foi registrado, quando, e o que ficou sem registro</span></li>
           <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5"/></svg><span>Sustentação: se a conclusão do laudo cabe dentro do que os exames mostram</span></li>
           <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5"/></svg><span>Aderência da conduta ao protocolo vigente à época dos fatos</span></li>
           <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5"/></svg><span>O que deveria constar no registro e não consta</span></li>
@@ -1515,10 +1504,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="case-story__narrative">
           <p>Imagine uma pessoa admitida em <strong>12/03, às 07:48</strong>, após uma queda da própria altura. Ela relata dor no quadril direito e só consegue deambular com auxílio.</p>
-          <p>Às <strong>08:15</strong>, o raio-X de bacia é descrito como sem fratura evidente. É administrada analgesia venosa. Às <strong>08:52</strong>, apenas 37 minutos depois, vem a alta com orientações e sintomáticos — sem reavaliação registrada.</p>
+          <p>Às <strong>08:15</strong>, o raio-X de bacia é descrito como sem fratura evidente. É administrada analgesia venosa. Às <strong>08:52</strong>, apenas 37 minutos depois, vem a alta com orientações e sintomáticos, sem reavaliação registrada.</p>
           <div class="case-story__silence"><span>60 horas sem registro de reavaliação</span></div>
           <p>Em <strong>14/03, às 21:30</strong>, há retorno com dor mantida e impotência funcional. A tomografia mostra uma fratura de colo femoral.</p>
-          <blockquote class="case-story__finding">A alta foi dada 37 minutos após o raio-X, sem reavaliação registrada. <strong>A fratura não estava ausente — estava não documentada.</strong></blockquote>
+          <blockquote class="case-story__finding">A alta foi dada 37 minutos após o raio-X, sem reavaliação registrada. <strong>A fratura não estava ausente, estava não documentada.</strong></blockquote>
           <div class="case-story__response">
             <span class="case-story__response-label">Como eu atuaria neste caso</span>
             <p>Eu reconstruiria a cronologia e confrontaria a dor persistente, a dificuldade para deambular, o exame físico, os limites do raio-X inicial e o protocolo vigente. Verificaria se havia indicação de <strong>reavaliação clínica, observação, repetição de imagem ou exame complementar</strong> antes da alta e formularia quesitos objetivos sobre oportunidade diagnóstica, nexo causal e repercussão do atraso. Assim, o caso deixa de ser apenas uma fratura descoberta depois e passa a responder à pergunta técnica central: <strong>a alta sem reavaliação e sem investigação adicional foi adequada aos sinais registrados?</strong></p>
@@ -1528,7 +1517,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- ══════ FAIXA DE ESPECIALIDADES — ESCOPO ══════ -->
+  <!-- ══════ FAIXA DE ESPECIALIDADES, ESCOPO ══════ -->
   <section class="expertise-strip" aria-label="Perícia Judicial e Assistência Técnica">
     <div class="expertise-strip__viewport">
       <div class="expertise-strip__track" aria-hidden="true">
@@ -1604,7 +1593,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="scope-rule" aria-hidden="true"></div>
         <div class="caveat">
-          <p><strong>Uma ressalva:</strong> Minha análise não depende de eu ser especialista na doença — depende de eu saber ler o documento que a registra, confrontá-lo com o que se alega e com a literatura vigente.</p>
+          <p><strong>Uma ressalva:</strong> Minha análise não depende de eu ser especialista na doença, depende de eu saber ler o documento que a registra, confrontá-lo com o que se alega e com a literatura vigente.</p>
           <p>Quando o caso exige profundidade clínica de uma subespecialidade, eu deixo isso claro desde a análise inicial e, se necessário, trabalho em conjunto com um consultor da área. Não fecho um contrato para assinar um parecer que eu não possa sustentar tecnicamente em audiência.</p>
         </div>
       </div>
@@ -1616,7 +1605,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap sec__in">
       <div class="sec__body critical__body">
         <h2>Urgência, emergência e paciente crítico</h2>
-        <p>Em uma frente específica, eu não trabalho apenas com o documento — trabalho com o cenário que o produziu.</p>
+        <p>Em uma frente específica, eu não trabalho apenas com o documento, trabalho com o cenário que o produziu.</p>
         <p>Plantão ativo em hospitais e UPAs pelo estado de Goiás. Aprovada em Residência Médica em Medicina Intensiva pelo ENARE. Certificada em ACLS, PALS e NALS.</p>
         <p class="pull">Em casos de acidente e politrauma, atendimento em pronto-socorro, internação em terapia intensiva, conduta em parada cardiorrespiratória e nexo causal em óbito, os protocolos que estarão em discussão são os mesmos que eu aplico no plantão.</p>
       </div>
@@ -1644,20 +1633,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <article class="svc">
             <span class="svc__n">01</span>
             <h3>Análise de viabilidade técnica</h3>
-            <p>Antes de você investir tempo e dinheiro no processo, eu leio a documentação médica e digo o que ela sustenta — e o que não sustenta. É a etapa que evita entrar numa tese que a medicina não fecha.</p>
+            <p>Antes de você investir tempo e dinheiro no processo, eu leio a documentação médica e digo o que ela sustenta e o que não sustenta. É a etapa que evita entrar numa tese que a medicina não fecha.</p>
             <p class="svc__for">Para decidir se ajuíza, se acorda, ou se muda a estratégia.</p>
             <a class="svc__cta" href="https://wa.me/5562996651270?text=Quero%20saber%20se%20meu%20caso%20tem%20sustenta%C3%A7%C3%A3o%20m%C3%A9dica." target="_blank" rel="noopener noreferrer">Quero avaliar a viabilidade</a>
           </article>
           <article class="svc">
             <span class="svc__n">02</span>
             <h3>Formulação de quesitos</h3>
-            <p>Quesito mal formulado é laudo perdido. Eu construo as perguntas técnicas que obrigam o perito a enfrentar o ponto que decide o caso — e fecho as saídas para respostas evasivas.</p>
+            <p>Quesito mal formulado é laudo perdido. Eu construo as perguntas técnicas que obrigam o perito a enfrentar o ponto que decide o caso e fecho as saídas para respostas evasivas.</p>
             <p class="svc__for">A fase mais barata e mais decisiva do processo.</p>
           </article>
           <article class="svc">
             <span class="svc__n">03</span>
             <h3>Parecer médico-pericial</h3>
-            <p>Documento técnico fundamentado em prontuário, exames e literatura médica atual, escrito para ser lido por juiz — não por médico. Cada conclusão vem com a referência que a sustenta.</p>
+            <p>Documento técnico fundamentado em prontuário, exames e literatura médica atual, escrito para ser lido por juiz, não por médico. Cada conclusão vem com a referência que a sustenta.</p>
             <p class="svc__for">Para instruir a inicial, a contestação ou o recurso.</p>
           </article>
           <article class="svc">
@@ -1730,11 +1719,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="signature__copy">
           <p>Médica formada pelo Centro Universitário de Goiatuba, com capacitação em Perícia Judicial e formação continuada em perícia sob mentoria especializada.</p>
-          <p>Mantém plantão ativo em hospitais e UPAs pelo estado de Goiás, com prática assistencial diária — o que mantém a leitura do registro médico próxima de como ele é efetivamente produzido.</p>
+          <p>Mantém plantão ativo em hospitais e UPAs pelo estado de Goiás, com prática assistencial diária, o que mantém a leitura do registro médico próxima de como ele é efetivamente produzido.</p>
           <p>Aprovada em Residência Médica em Medicina Intensiva pelo ENARE. Certificada em ACLS, PALS e NALS.</p>
         </div>
 
-        <p class="signature__statement">O prontuário que está no seu processo é o mesmo tipo de documento que eu preencho no plantão desta semana. Eu não interpreto o registro médico de fora — eu o produzo.</p>
+        <p class="signature__statement">O prontuário que está no seu processo é o mesmo tipo de documento que eu preencho no plantão desta semana. Eu não interpreto o registro médico de fora, eu o produzo.</p>
 
         <a class="btn deliverables__cta signature__cta" href="https://wa.me/5562996651270?text=Quero%20falar%20com%20a%20Dra.%20El%C3%A1ria%20sobre%20um%20caso%20m%C3%A9dico-legal." target="_blank" rel="noopener noreferrer" aria-label="Falar com a Dra. Elária sobre um caso médico-legal pelo WhatsApp">
           <span class="deliverables__cta-inner">
@@ -1762,26 +1751,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="faq__column">
           <div class="faqgroup">
             <div class="faqgroup__head"><p class="faqgroup__t">Sobre a função</p><span class="faqgroup__count">05 perguntas</span></div>
-            <details><summary>Qual a diferença entre perito judicial e assistente técnico?</summary><p>O perito é nomeado pelo juízo e responde ao juízo — é equidistante das partes. O assistente técnico é indicado por uma das partes e faz a leitura médica em favor dela, dentro dos limites da ética médica. São funções distintas e legalmente previstas. Ter assistente técnico não desqualifica o perito: garante que a parte tenha leitura médica própria.</p></details>
+            <details><summary>Qual a diferença entre perito judicial e assistente técnico?</summary><p>O perito é nomeado pelo juízo e responde ao juízo, é equidistante das partes. O assistente técnico é indicado por uma das partes e faz a leitura médica em favor dela, dentro dos limites da ética médica. São funções distintas e legalmente previstas. Ter assistente técnico não desqualifica o perito: garante que a parte tenha leitura médica própria.</p></details>
             <details><summary>Ter assistente técnico não passa a impressão de que estou desconfiando do perito?</summary><p>Não. É prática processual comum e prevista em lei. O que o juízo observa é a qualidade técnica do que foi apresentado, não o fato de a parte ter se assessorado. Discordância fundamentada é contribuição ao processo, não afronta.</p></details>
-            <details><summary>Em que momento do processo eu devo te acionar?</summary><p>Quanto antes, melhor — idealmente antes da perícia, na fase de quesitos. É a intervenção mais barata e a de maior impacto. Depois do laudo juntado ainda se trabalha via impugnação, mas o esforço é maior e o resultado menos previsível.</p></details>
+            <details><summary>Em que momento do processo eu devo te acionar?</summary><p>Quanto antes, melhor, idealmente antes da perícia, na fase de quesitos. É a intervenção mais barata e a de maior impacto. Depois do laudo juntado ainda se trabalha via impugnação, mas o esforço é maior e o resultado menos previsível.</p></details>
             <details><summary>E se o laudo já foi juntado e veio contra?</summary><p>Ainda há caminho: análise crítica do laudo, identificação de vícios técnicos, contradições com o prontuário, critério desatualizado ou conclusão que extrapola o que os exames sustentam. É material para impugnação, pedido de esclarecimentos, nova perícia ou recurso. Me envie o laudo e o prontuário: na leitura inicial eu digo se há o que atacar e por qual via.</p></details>
             <details><summary>Você garante que a decisão será favorável?</summary><p>Não. Nenhum profissional sério garante resultado, e prometer isso é vedado pelo Código de Ética Médica. O que eu garanto é análise técnica fundamentada, honesta e defensável. Se a documentação não sustenta a tese, você fica sabendo antes de investir, não na audiência.</p></details>
           </div>
 
           <div class="faqgroup">
             <div class="faqgroup__head"><p class="faqgroup__t">Sobre valores</p><span class="faqgroup__count">03 perguntas</span></div>
-            <details><summary>Quanto custa?</summary><p>Depende do serviço e da complexidade do caso. Você recebe proposta fechada por escrito, com escopo, prazo e valor, antes de qualquer trabalho começar — nada é iniciado sem o seu aceite.</p></details>
+            <details><summary>Quanto custa?</summary><p>Depende do serviço e da complexidade do caso. Você recebe proposta fechada por escrito, com escopo, prazo e valor, antes de qualquer trabalho começar, nada é iniciado sem o seu aceite.</p></details>
             <details><summary>Posso contratar só a análise de viabilidade, sem seguir com o parecer?</summary><p>Pode, e muitos casos começam assim. Você contrata apenas a leitura técnica inicial, recebe o diagnóstico do que a documentação sustenta e do que falta, e decide a partir dali se faz sentido seguir para parecer, quesitos ou impugnação. Não há obrigação de contratar as etapas seguintes.</p></details>
-            <details><summary>Dá para parcelar ou vincular ao êxito?</summary><p>Parcelamento, sim — conversamos caso a caso. Honorário vinculado a resultado, não: além de comprometer a imparcialidade técnica do parecer, é um arranjo que fragiliza o próprio documento se questionado no processo.</p></details>
+            <details><summary>Dá para parcelar ou vincular ao êxito?</summary><p>Parcelamento, sim, conversamos caso a caso. Honorário vinculado a resultado, não: além de comprometer a imparcialidade técnica do parecer, é um arranjo que fragiliza o próprio documento se questionado no processo.</p></details>
           </div>
         </div>
 
         <div class="faq__column">
           <div class="faqgroup">
             <div class="faqgroup__head"><p class="faqgroup__t">Sobre o escopo</p><span class="faqgroup__count">05 perguntas</span></div>
-            <details><summary>Você atende qualquer especialidade médica?</summary><p>Atuo na análise documental de casos em todas as áreas da medicina, porque meu objeto de trabalho é o registro médico — que é o mesmo em toda a medicina. Quando o caso exige profundidade clínica de subespecialidade, eu informo e trabalho com um consultor da área. Não assino parecer que eu não sustente.</p></details>
-            <details><summary>Qual é o seu diferencial em relação a outros assistentes técnicos?</summary><p>Eu mantenho prática assistencial ativa, em plantão de hospital e UPA. Isso significa que eu leio o prontuário do seu processo do mesmo lugar de quem o escreve — e enxergo as lacunas, incoerências de cronologia e anotações retrospectivas que passam despercebidas para quem se afastou da assistência. Além disso, tenho profundidade adicional em urgência, emergência e paciente crítico.</p></details>
+            <details><summary>Você atende qualquer especialidade médica?</summary><p>Atuo na análise documental de casos em todas as áreas da medicina, porque meu objeto de trabalho é o registro médico, que é o mesmo em toda a medicina. Quando o caso exige profundidade clínica de subespecialidade, eu informo e trabalho com um consultor da área. Não assino parecer que eu não sustente.</p></details>
+            <details><summary>Qual é o seu diferencial em relação a outros assistentes técnicos?</summary><p>Eu mantenho prática assistencial ativa, em plantão de hospital e UPA. Isso significa que eu leio o prontuário do seu processo do mesmo lugar de quem o escreve e enxergo as lacunas, incoerências de cronologia e anotações retrospectivas que passam despercebidas para quem se afastou da assistência. Além disso, tenho profundidade adicional em urgência, emergência e paciente crítico.</p></details>
             <details><summary>Você trabalha para o autor ou para o réu?</summary><p>Para os dois. A análise técnica é a mesma; o que muda é a parte que a contrata. Atuo tanto na sustentação quanto na defesa, incluindo casos de erro assistencial em que o assistido é o médico ou a instituição.</p></details>
             <details><summary>Você atende fora de Goiás?</summary><p>Sim. Análise documental, parecer, quesitos e impugnação são feitos à distância, sem prejuízo de qualidade. Para acompanhamento presencial em ato pericial, consulte disponibilidade e deslocamento.</p></details>
             <details><summary>Você atende pessoa física, sem advogado?</summary><p>Sim, para parecer técnico e orientação médico-legal. Mas se o caso é judicial, o parecer rende muito mais nas mãos de um advogado. Se você ainda não tem, oriento sobre isso.</p></details>
@@ -1789,9 +1778,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <div class="faqgroup">
             <div class="faqgroup__head"><p class="faqgroup__t">Sobre o trabalho</p><span class="faqgroup__count">05 perguntas</span></div>
-            <details><summary>Meu cliente precisa ser examinado por você?</summary><p>Nem sempre. Boa parte do trabalho — análise de prontuário, quesitos, impugnação — é documental. Quando o exame direto agrega, eu informo.</p></details>
-            <details><summary>Que documentos eu preciso enviar?</summary><p>O ideal: prontuário e/ou ficha de atendimento, laudos e exames complementares, laudo pericial (se houver), peça processual relevante, e CAT em caso de acidente de trabalho. Não precisa estar organizado — pode enviar como estiver.</p></details>
-            <details><summary>E se eu não tiver o prontuário completo?</summary><p>Envie o que tem. Parte do meu trabalho é justamente identificar o que falta e orientar como requisitar — inclusive porque a ausência de um registro que deveria existir é, em si, um ponto técnico aproveitável.</p></details>
+            <details><summary>Meu cliente precisa ser examinado por você?</summary><p>Nem sempre. Boa parte do trabalho, análise de prontuário, quesitos, impugnação, é documental. Quando o exame direto agrega, eu informo.</p></details>
+            <details><summary>Que documentos eu preciso enviar?</summary><p>O ideal: prontuário e/ou ficha de atendimento, laudos e exames complementares, laudo pericial (se houver), peça processual relevante, e CAT em caso de acidente de trabalho. Não precisa estar organizado, pode enviar como estiver.</p></details>
+            <details><summary>E se eu não tiver o prontuário completo?</summary><p>Envie o que tem. Parte do meu trabalho é justamente identificar o que falta e orientar como requisitar, inclusive porque a ausência de um registro que deveria existir é, em si, um ponto técnico aproveitável.</p></details>
             <details><summary>Qual o prazo de entrega?</summary><p>5 a 7 dias úteis a partir do aceite da proposta e do recebimento da documentação. Casos com prazo processual em curso: me informe a data-limite que eu verifico a viabilidade de prioridade.</p></details>
             <details><summary>Como funciona o sigilo?</summary><p>Sigilo médico é obrigação legal e ética, não diferencial. Toda documentação recebida é tratada sob sigilo profissional e nada é compartilhado sem sua autorização expressa.</p></details>
           </div>
@@ -1806,7 +1795,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="final">
           <p class="final__label">Contato</p>
           <h2><span>Manda o caso.</span> Eu te digo o que ele sustenta.</h2>
-          <p>Você recebe a proposta com escopo, prazo e valor antes de qualquer trabalho começar. E descobre em horas, não em meses, se a documentação médica sustenta a sua tese — em vez de descobrir isso no meio da audiência.</p>
+          <p>Você recebe a proposta com escopo, prazo e valor antes de qualquer trabalho começar. E descobre em horas, não em meses, se a documentação médica sustenta a sua tese, em vez de descobrir isso no meio da audiência.</p>
           <div class="final__row">
             <a class="btn deliverables__cta final__whatsapp" href="https://wa.me/5562996651270?text=Quero%20enviar%20meu%20caso%20para%20an%C3%A1lise%20t%C3%A9cnica%20e%20saber%20se%20h%C3%A1%20sustenta%C3%A7%C3%A3o%20m%C3%A9dica." target="_blank" rel="noopener noreferrer" aria-label="Enviar o caso para análise técnica pelo WhatsApp">
               <span class="deliverables__cta-inner">
@@ -1827,7 +1816,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="foot">
   <div class="wrap foot__in">
     <div class="foot__top">
-      <a class="foot__brand" href="#topo" aria-label="EPR Perícia Médica e Assistência Técnica — voltar ao topo">
+      <a class="foot__brand" href="#topo" aria-label="EPR Perícia Médica e Assistência Técnica, voltar ao topo">
         <img class="foot__logo" src="assets/logo.svg" alt="EPR" width="546" height="282" loading="lazy" decoding="async">
         <span class="foot__brand-copy">Perícia Médica e Assistência Técnica</span>
       </a>
